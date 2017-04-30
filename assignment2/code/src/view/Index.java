@@ -44,6 +44,7 @@ public class Index extends Application {
 					}
 
 				});//change the stage(open the new "windows"
+				primaryStage.close();//close the window
 			}
 
 		});
