@@ -1,6 +1,7 @@
 package view;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -25,42 +26,43 @@ public class Index extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
 		Button btn1 = new Button();
-		Button btn2 = new Button();
 		btn1.setText("Start");
 		btn1.setOnAction(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent event) {
-				System.out.println("Hello World!");
-			}
-		});
-
-		btn2.setText("Close");
-		btn2.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
 			public void handle(ActionEvent event) {
 				// TODO Auto-generated method stub
-				Index.close();
+
+				Platform.runLater(new Runnable() {
+					public void run() {
+						try {
+							new MainGameView().start(new Stage());
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
+
+				});//change the stage(open the new "windows"
 			}
 
 		});
 
 		StackPane root = new StackPane();
-		StackPane root1 = new StackPane();
+
 		root.getChildren().add(btn1);
-		root1.getChildren().add(btn2);
-		Scene scene = new Scene(root, 100, 250);
-		Scene scene1 = new Scene(root1, 400, 250);
+
+		Scene scene = new Scene(root, 400, 250);
 
 		primaryStage.setTitle("OLYMPIZ");
 		primaryStage.setScene(scene);
-		primaryStage.setScene(scene1);
+
 		primaryStage.show();
 	}
 
 	protected static void close() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }
