@@ -1,11 +1,11 @@
-package com.ap.ass2.view;
+package com.ap.ozlympic.view;
 
-import com.ap.ass2.controller.ViewAll;
-import com.ap.ass2.controller.ViewCy;
-import com.ap.ass2.controller.ViewOf;
-import com.ap.ass2.controller.ViewRN;
-import com.ap.ass2.controller.ViewSW;
-import com.ap.ass2.model.Message;
+import com.ap.ozlympic.controller.ViewAll;
+import com.ap.ozlympic.controller.ViewCy;
+import com.ap.ozlympic.controller.ViewOf;
+import com.ap.ozlympic.controller.ViewRN;
+import com.ap.ozlympic.controller.ViewSW;
+import com.ap.ozlympic.model.Message;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
