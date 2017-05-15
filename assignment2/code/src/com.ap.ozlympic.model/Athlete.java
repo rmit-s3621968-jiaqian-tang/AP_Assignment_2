@@ -1,4 +1,4 @@
-package com.ap.ass2.model;
+package com.ap.ozlympic.model;
 
 
 public abstract class Athlete extends Participants {
