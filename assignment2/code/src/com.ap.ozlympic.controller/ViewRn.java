@@ -12,13 +12,13 @@ import com.ap.ozlympic.model.SQLHelper;
 
 import javafx.collections.FXCollections;
 
-public class ViewOf implements Initializable {
+public class ViewRn implements Initializable {
 
 	public static ObservableList<Message> getList() {
 		ObservableList<Message> list = FXCollections.observableArrayList();
 	SQLHelper sp=new SQLHelper();
 	try{
-	String sql="select * from participants where Type like 'officer';";
+	String sql="select * from participants where Type like 'sprinter' or  Type like 'super';";
 	ResultSet rs=sp.query(sql);
 		
 			while (rs.next()) {
@@ -30,6 +30,8 @@ public class ViewOf implements Initializable {
 		}
 		return list;
 	}
+	
+
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {

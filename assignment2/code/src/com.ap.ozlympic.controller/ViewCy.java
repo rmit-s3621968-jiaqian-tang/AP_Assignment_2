@@ -8,9 +8,9 @@ import java.sql.*;
 import java.util.ResourceBundle;
 
 import com.ap.ozlympic.model.Message;
+import com.ap.ozlympic.model.SQLHelper;
 
 import javafx.collections.FXCollections;
-import com.ap.ozlympic.model.SQLHelper;
 
 public class ViewCy implements Initializable {
 
@@ -18,7 +18,7 @@ public class ViewCy implements Initializable {
 		ObservableList<Message> list = FXCollections.observableArrayList();
 	SQLHelper sp=new SQLHelper();
 	try{
-	String sql="select * from Participant where Type like 'cyclist' or  Type like 'super';";
+	String sql="select * from participants where Type like 'cyclist' or  Type like 'super';";
 	ResultSet rs=sp.query(sql);
 		
 			while (rs.next()) {

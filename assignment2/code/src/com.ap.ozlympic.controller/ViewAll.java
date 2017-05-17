@@ -8,21 +8,21 @@ import java.sql.*;
 import java.util.ResourceBundle;
 
 import com.ap.ozlympic.model.Message;
+import com.ap.ozlympic.model.SQLHelper;
 
 import javafx.collections.FXCollections;
-import com.ap.ozlympic.model.SQLHelper;
 
 public class ViewAll implements Initializable {
 
 	public static ObservableList<Message> getList() {
 		ObservableList<Message> list = FXCollections.observableArrayList();
-	SQLHelper sp=new SQLHelper();
-	try{
-	String sql="select * from Participant;";
-	ResultSet rs=sp.query(sql);
-		
+		SQLHelper sp = new SQLHelper();
+		try {
+			String sql = "select * from participants;";
+			ResultSet rs = sp.query(sql);
+
 			while (rs.next()) {
-				list.add(new Message(rs.getString("ID"), rs.getString("Type"), rs.getString("Name"), rs.getInt("Age"),
+				list.add(new Message(rs.getString("ID"), rs.getString("type"), rs.getString("name"), rs.getInt("age"),
 						rs.getString("State")));
 			}
 		} catch (Exception e2) {
