@@ -5,7 +5,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ SprinterTest.class, SQLHelperTest.class })
+@SuiteClasses({ SprinterTest.class, SQLHelperTest.class,OfficialTest.class  })
 public class AllTests {
 	
 	
