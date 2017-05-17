@@ -1,6 +1,5 @@
 package com.ap.ozlympic.model;
 
-
 public abstract class Participants {
 	private String ID;
 	private String type;

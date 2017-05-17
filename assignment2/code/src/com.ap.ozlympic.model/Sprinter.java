@@ -1,6 +1,5 @@
 package com.ap.ozlympic.model;
 
-
 import java.util.Random;
 
 public class Sprinter extends Athlete {

@@ -3,7 +3,6 @@ package com.ap.ozlympic.model;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Official extends Participants {
 
 	ArrayList<Athlete> resultList = new ArrayList<>();
@@ -19,11 +18,12 @@ public class Official extends Participants {
 		super(ID, type, name, age, state);
 		// TODO Auto-generated constructor stub
 	}
-	public void initNewGame(){
+
+	public void initNewGame() {
 		resultList = new ArrayList<>();
 		scoreList = new ArrayList<>();
 	}
-	
+
 	public void rank(Athlete athlete, int result) {
 		for (int i = 0; i < scoreList.size(); i++) {
 			if (scoreList.get(i) < result) {

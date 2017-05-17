@@ -1,10 +1,8 @@
 package com.ap.ozlympic.model;
 
-
 import java.util.Random;
 
-import com.ap.ass2.controller.Driver;
-
+import com.ap.ozlympic.controller.Driver;
 
 public class SuperAthlete extends Athlete {
 
@@ -31,7 +29,7 @@ public class SuperAthlete extends Athlete {
 			start = 500;
 			break;
 		}
-		
+
 		int seconds;
 		Random R = new Random();
 		seconds = R.nextInt(range) + start;

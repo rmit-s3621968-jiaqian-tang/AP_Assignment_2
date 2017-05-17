@@ -1,6 +1,5 @@
 package com.ap.ozlympic.model;
 
-
 public abstract class Athlete extends Participants {
 
 	private int points = 0;

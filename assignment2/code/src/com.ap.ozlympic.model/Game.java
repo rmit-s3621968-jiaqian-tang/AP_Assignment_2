@@ -40,6 +40,16 @@ public abstract class Game {
 		pList.add(resultList.get(2).getID());
 		return pList;
 	}
+	
+	public List<String> getPrintName(){
+		List<String> nList =new ArrayList<String>();
+		nList.add(referee.getName());
+		nList.add(resultList.get(0).getName());
+		nList.add(resultList.get(1).getName());
+		nList.add(resultList.get(2).getName());
+		return nList;
+		
+	}
 
 	
 	public String getID() {
